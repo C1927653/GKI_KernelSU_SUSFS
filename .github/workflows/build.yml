@@ -265,7 +265,7 @@ jobs:
         run: |
             cd $GITHUB_WORKSPACE
             git clone https://github.com/djt889/android_gki_kernel_5.15_common.git
-            mv android_gki_kernel_5.15_common common
+            mv android_gki_kernel_5.15_common $KERNEL_ROOT/common
            #    git clone https://github.com/LineageOS/and   roid_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1.git gcc
 
           # FORMATTED_BRANCH="${{ inputs.android_version }}-${{ inputs.kernel_version }}-${{ inputs.os_patch_level }}"
