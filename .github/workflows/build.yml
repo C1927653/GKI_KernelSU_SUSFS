@@ -339,7 +339,8 @@ jobs:
             "${{ inputs.kernel_version }}" \
             "$ACTUAL_SUBLEVEL" \
             "$GITHUB_WORKSPACE/security_patch"
-
+            cd $GITHUB_WORKSPACE
+            mv common $KERNEL_ROOT/ 
       - name: 修复 glibc 2.38 兼容性
         working-directory: ${{ env.KERNEL_ROOT }}/common
         run: |
